@@ -1,69 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Efeito Parallax</title>
+    <title>Home | Efeito Parallax</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
   </head>
 
-  <body class="about__page">
+  <body class="home">
     <header>
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__item"><a href="index.html">home</a></li>
-          <li class="nav__item active"><a href="about.html">sobre</a></li>
+          <li class="nav__item active"><a class="" href="index.html">home</a></li>
+          <li class="nav__item"><a href="about.html">sobre</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="about">
-      <div class="about__container">
-        <div class="planet-side">
-          <div class="planet"></div>  
+    <main>
+      <section class="parallax">
+        <div class="planet parallax__planet"></div>
+        <img class="parallax__astronaut" src="./img/astronaut.png" alt="">
+        <div class="parallax__layers">
+          <div class="layer parallax__layer0"></div>
+        
+          <div class="layer parallax__layer1"></div>
+          <div class="layer parallax__layer2"></div>
+          <div class="layer parallax__layer3"></div>
+          <div class="layer parallax__layer4"></div>
+          <div class="layer parallax__layer5"></div>
         </div>
-        <div class="text-side">
-          <h2 class="about__title">Saudações, terráqueos!</h2>
-          <p class="about__p">
-            Esta página foi desenvolvida como forma de praticar o conceito de parallax com CSS e JavaScript.
-          </p>
+      </section>
+      
+      <section class="text">
+        <img class="text__div" src="./img/meteor6.png" alt="">
+        <h1 class="text__parallax">Efeito Parallax</h1>
+        <div class="text__box">
+          <h2 class="text__title">O que é parallax?</h2>
 
-          <p class="about__p">
-            Todos os códigos estão disponíveis no meu perfil do GitHub.
-          </p>
-
-          <a class="about__btn" href="#">
-            <img src="./img/icon-github-small.png" alt="ícone GitHub">
-            <p>Acessar GitHub</p>
-          </a>
+          <p class="text__p">Parallax é um efeito visual causado pela ilusão de ótica que dá a sensação de profundidade à página, na qual, os elementos de   se movimentam em velocidades diferentes se comparado com os elementos em primeiro  plano.</p>
+          <p class="text__p">Este efeito oferece uma experiência imersiva aos visitantes da página, já que cria um ambiente 3D em uma tela 2D.  </p>
         </div>
-      </div>
-    </main>
+      </section>
 
-    <footer class="footer footer-about">
-      <ul class="footer__social__icon-list">
-        <li class="social__icon-item">
-          <a href="http://www.instagram.com/luciana_kyoko/" target="_blank" rel="noopener noreferrer">
-            <img src="./img/icon-instagram.png" alt="Ícone do Instagram">
-          </a>
-        </li>
-        <li class="social__icon-item">
-          <a href="http://github.com/lucianakyoko" target="_blank" rel="noopener noreferrer">
-            <img src="./img/icon-github.png" alt="Ícone do GitHub">
-          </a>
-        </li>
-        <li class="social__icon-item">
-          <a href="http://www.linkedin.com/in/lucianakyoko/" target="_blank" rel="noopener noreferrer">
-            <img src="./img/icon-linkedin.png" alt="Ícone do Linkedin">
-          </a>
-        </li>
-      </ul>
+      <footer class="footer footer-home">
+        <ul class="footer__social__icon-list">
+          <li class="social__icon-item">
+            <a href="http://www.instagram.com/luciana_kyoko/" target="_blank" rel="noopener noreferrer">
+              <img src="./img/icon-instagram.png" alt="Ícone do Instagram">
+            </a>
+          </li>
+          <li class="social__icon-item">
+            <a href="http://github.com/lucianakyoko" target="_blank" rel="noopener noreferrer">
+              <img src="./img/icon-github.png" alt="Ícone do GitHub">
+            </a>
+          </li>
+          <li class="social__icon-item">
+            <a href="http://www.linkedin.com/in/lucianakyoko/" target="_blank" rel="noopener noreferrer">
+              <img src="./img/icon-linkedin.png" alt="Ícone do Linkedin">
+            </a>
+          </li>
+        </ul>
+  
+        <p class="footer__paragraph">Designed and developed with &#9829 by <span><a class="site-link" href="https://lucianakyoko.netlify.app" target="_blank" rel="noopener noreferrer">Lukyoko</a></span></p>
+      </footer>
 
-      <p class="footer__paragraph">Designed and developed with &#9829 by <span><a class="site-link" href="https://lucianakyoko.netlify.app" target="_blank" rel="noopener noreferrer">Lukyoko</a></span></p>
-    </footer>
+      <script src="./js/app.js"></script>
   </body>
 </html>
