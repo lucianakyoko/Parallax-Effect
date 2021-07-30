@@ -25,4 +25,4 @@
 ## Link da página:[aqui](https://efeito-parallax-com-js.netlify.app/)
  
  
- ![Preview da página](https://github.com/lucianakyoko/3D-Card-Hover-Effect/blob/main/3deffect.gif)
+ ![Preview da página](https://https://github.com/lucianakyoko/Parallax-Effect/blob/main/preview.gif)
