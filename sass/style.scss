@@ -1,0 +1,73 @@
+//Pallet collors:
+$color-primary: #02030C;
+$color-secondary: #05061A;
+$color-tertiary: #762A6A;
+$color-text: #FFFAFA;
+
+
+@mixin planet {
+    border-radius: 50%;
+
+    background-image: url(../img/map.png);
+    background-size: cover;    ;
+    background-repeat: no-repeat;
+
+    animation: rotate 15s linear infinite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Orbitron', sans-serif;
+    color: $color-text;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $color-text;
+}
+
+
+.planet {
+    width: 13rem; height: 13rem;
+    border-radius: 50%;
+
+    background-image: url(../img/map.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        background-position: 100%;
+    }
+}
+
+
+@keyframes stars{
+    100% {
+      background-image: url(../img/Galaxy1.png);
+      background-image: url(../img/Galaxy2.png);
+    }
+    50% {
+      background-image: url(../img/Galaxy2.png);
+      background-image: url(../img/Galaxy1.png);
+    }
+    0% {
+      background-image: url(../img/Galaxy1.png);
+      background-image: url(../img/Galaxy2.png);
+    }
+  }
+
+@import 'navbar';
