@@ -117,3 +117,303 @@ a {
     font-size: 1.6rem;
   }
 }
+
+.home {
+  background: url(../img/background-home.jpg) no-repeat fixed;
+  min-height: 1000px;
+}
+
+.parallax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.parallax__astronaut {
+  width: 45%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -4;
+}
+
+.parallax__layers {
+  width: 100%;
+  min-height: 1000px;
+  overflow: hidden;
+}
+
+.parallax .layer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.parallax__planet {
+  width: 26rem;
+  height: 26rem;
+  border-radius: 50%;
+  background-image: url(../img/map.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: rotate 15s linear infinite;
+  box-shadow: -25px -25px 25px black inset, 30px 20px 70px #762A6A inset, 0px 0px 10px #ffffff;
+  position: fixed;
+  bottom: 20rem;
+  left: 73rem;
+  z-index: -2;
+}
+
+.parallax__layer0 {
+  background: url(../img/meteor1.png) no-repeat;
+  top: 1rem;
+  left: 20rem;
+}
+
+.parallax__layer1 {
+  background: url(../img/meteor1.png) no-repeat;
+  top: -2rem;
+  left: 50rem;
+}
+
+.parallax__layer2 {
+  background: url(../img/meteor2.png) no-repeat;
+  top: -8rem;
+  left: 20rem;
+}
+
+.parallax__layer3 {
+  background: url(../img/meteor3.png) no-repeat;
+  top: -8rem;
+  left: 100rem;
+}
+
+.parallax__layer4 {
+  background: url(../img/meteor4.png) no-repeat;
+  top: 10rem;
+  left: 45rem;
+}
+
+.parallax__layer5 {
+  background: url(../img/meteor5.png) no-repeat;
+  top: -8rem;
+  left: 8rem;
+}
+
+.text {
+  position: relative;
+  top: 0rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #05061A;
+  animation: stars 3s linear infinite;
+  z-index: -1;
+}
+
+.text__div {
+  width: 100%;
+  position: relative;
+  top: -22rem;
+  left: 0;
+}
+
+.text__parallax {
+  font-size: 12rem;
+  position: absolute;
+  top: 0;
+  z-index: -4;
+}
+
+.text__box {
+  background-color: rgba(2, 3, 12, 0.76);
+  width: 60%;
+  padding: 4rem;
+  border-radius: .8rem;
+  position: absolute;
+  top: 8rem;
+}
+
+.text__title {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.text__p {
+  font-size: 1.8rem;
+  letter-spacing: .8rem;
+  line-height: 2;
+}
+
+.text__p:last-child {
+  margin-top: 1.8rem;
+}
+
+@media screen and (max-width: 1025px) {
+  .parallax__planet {
+    width: 20rem;
+    height: 20rem;
+    bottom: 15rem;
+    left: 73rem;
+  }
+  .text__div {
+    top: -20rem;
+    left: 0;
+  }
+  .text__parallax {
+    font-size: 10rem;
+  }
+  .text__box {
+    width: 80%;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  .text__title {
+    font-size: 3.2rem;
+  }
+  .text__p {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .parallax__astronaut {
+    width: 60%;
+  }
+  .parallax__planet {
+    width: 50rem;
+    height: 50rem;
+    bottom: 10rem;
+    left: 55rem;
+  }
+  .parallax__layer0 {
+    top: 1rem;
+    left: 10rem;
+  }
+  .parallax__layer1 {
+    top: -2rem;
+    left: 5rem;
+  }
+  .parallax__layer2 {
+    top: -12rem;
+    left: 2rem;
+  }
+  .parallax__layer3 {
+    left: -24rem;
+  }
+  .parallax__layer4 {
+    top: 10rem;
+    left: 30rem;
+  }
+  .parallax__layer5 {
+    top: -8rem;
+    left: 55rem;
+  }
+  .text__div {
+    top: -22rem;
+    left: 0;
+  }
+  .text__parallax {
+    font-size: 8rem;
+  }
+  .text__box {
+    width: 90%;
+    margin-top: 4rem;
+  }
+  .text__title {
+    font-size: 3rem;
+  }
+  .text__p {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .parallax__astronaut {
+    width: 100%;
+  }
+  .parallax__planet {
+    width: 50rem;
+    height: 50rem;
+    bottom: 45rem;
+    left: 12rem;
+    z-index: -4;
+  }
+  .parallax__layer0 {
+    top: 1rem;
+    left: 0rem;
+  }
+  .parallax__layer1 {
+    top: -2rem;
+    left: 5rem;
+  }
+  .parallax__layer2 {
+    top: -8rem;
+    left: 2rem;
+  }
+  .parallax__layer3 {
+    display: none;
+  }
+  .parallax__layer4 {
+    top: 10rem;
+    left: 20rem;
+  }
+  .parallax__layer5 {
+    top: -8rem;
+    left: -18rem;
+  }
+  .text__div {
+    top: -26rem;
+    left: 0;
+  }
+  .text__parallax {
+    font-size: 6rem;
+    text-align: center;
+  }
+  .text__box {
+    width: 100%;
+    padding: 2rem;
+    top: 2rem;
+  }
+  .text__title {
+    font-size: 2rem;
+    letter-spacing: .8rem;
+  }
+  .text__p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .text__div {
+    top: -33rem;
+    left: 0;
+  }
+  .text__parallax {
+    font-size: 5rem;
+  }
+  .text__box {
+    padding: .8rem;
+  }
+  .text__title {
+    font-size: 1.8rem;
+  }
+  .text__p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .text__div {
+    top: -26rem;
+    left: 0;
+  }
+}

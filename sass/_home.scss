@@ -1,0 +1,321 @@
+.home {
+  background: url(../img/background-home.jpg) no-repeat fixed;
+  min-height: 1000px;
+}
+
+.parallax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+  &__astronaut {
+    width: 45%;
+    position: absolute;
+    bottom: 0; left: 0;
+    z-index: -4;
+  }
+
+  &__layers {
+    width: 100%;
+    min-height: 1000px;
+    overflow: hidden;
+  }
+
+  .layer {
+    width: 100%; height: 100%;
+    position: fixed;
+    z-index: -1;
+  }
+
+  &__planet {
+    width: 26rem; height: 26rem;
+    @include planet;
+    box-shadow: -25px -25px 25px black inset, 30px 20px 70px #762A6A inset, 0px 0px 10px #ffffff;
+      position: fixed;
+    bottom: 20rem; left: 73rem;
+    z-index: -2;
+  }
+
+  &__layer0 {
+    background: url(../img/meteor1.png) no-repeat;
+    top: 1rem; left: 20rem;
+  }
+
+  &__layer1 {
+    background: url(../img/meteor1.png) no-repeat;
+    top: -2rem; left: 50rem;
+  }
+
+  &__layer2 {
+    background: url(../img/meteor2.png) no-repeat;
+    top: -8rem; left: 20rem;
+  }
+
+  &__layer3 {
+    background: url(../img/meteor3.png) no-repeat;
+    top: -8rem; left: 100rem;
+  }
+
+  &__layer4 {
+    background: url(../img/meteor4.png) no-repeat;
+    top: 10rem; left: 45rem;
+  }
+
+  &__layer5 {
+    background: url(../img/meteor5.png) no-repeat;
+    top: -8rem; left: 8rem;
+  }
+
+}
+
+
+.text {
+  position: relative;
+  top: 0rem;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-color:$color-secondary;
+  animation: stars 3s linear infinite;
+  z-index: -1;
+
+  &__div {
+    width: 100%;
+    position: relative;
+    top: -22rem; left: 0;
+  }
+
+  &__parallax {
+    font-size: 12rem;
+    position: absolute;
+    top: 0;
+    z-index: -4;
+  }
+
+  &__box {
+    background-color: rgba(2, 3, 12, 0.76);
+    width: 60%;
+    padding: 4rem;
+    border-radius: .8rem;
+
+    position: absolute;
+    top: 8rem;
+
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 1rem;
+    text-align: center;
+    margin-bottom: 2.4rem;
+  }
+
+  &__p {
+    font-size: 1.8rem;
+    letter-spacing: .8rem;
+    line-height: 2;
+  }
+
+  &__p:last-child {
+    margin-top: 1.8rem;
+  }
+}
+
+
+//Media Queries:
+@media screen and (max-width: 1025px) {
+  .parallax {    
+    &__planet {
+      width: 20rem; height: 20rem;
+      bottom: 15rem; left: 73rem;
+    }  
+  }
+  
+  .text {  
+    &__div {
+      top: -20rem; left: 0;
+    }
+  
+    &__parallax {
+      font-size: 10rem;
+    }
+  
+    &__box {
+      width: 80%;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+  
+    &__title {
+      font-size: 3.2rem;
+    }
+  
+    &__p {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {  
+  .parallax {  
+    &__astronaut {
+      width: 60%;
+    }
+  
+    &__planet {
+      width: 50rem; height: 50rem;
+      bottom: 10rem; left: 55rem;
+    }
+  
+    &__layer0 {
+      top: 1rem; left: 10rem;
+
+    }
+  
+    &__layer1 {
+      top: -2rem; left: 5rem;
+    }
+  
+    &__layer2 {
+      top: -12rem; left: 2rem;
+    }
+  
+    &__layer3 {
+      left: -24rem;
+    }
+  
+    &__layer4 {
+      top: 10rem; left: 30rem;
+    }
+  
+    &__layer5 {
+      top: -8rem; left: 55rem;
+    }
+  }
+    
+  .text {
+    &__div {
+      top: -22rem; left: 0;
+    }
+  
+    &__parallax {
+      font-size: 8rem;
+    }
+  
+    &__box {
+      width: 90%;
+      margin-top: 4rem;
+    }
+  
+    &__title {
+      font-size: 3rem;
+    }
+  
+    &__p {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+   .parallax { 
+    &__astronaut {
+      width: 100%;
+    }
+
+    &__planet {
+      width: 50rem; height: 50rem;
+      bottom: 45rem; left: 12rem;
+      z-index: -4;
+    }
+  
+    &__layer0 {
+      top: 1rem; left: 0rem;
+    }
+  
+    &__layer1 {
+      top: -2rem; left: 5rem;
+    }
+  
+    &__layer2 {
+      top: -8rem; left: 2rem;
+    }
+  
+    &__layer3 {
+      display: none;
+    }
+  
+    &__layer4 {
+      top: 10rem; left: 20rem;
+    }
+  
+    &__layer5 {
+      top: -8rem; left: -18rem;
+    }
+  
+  }
+  
+  .text {  
+    &__div {
+      top: -26rem; left: 0;
+    }
+  
+    &__parallax {
+      font-size: 6rem;
+      text-align: center;
+    }
+  
+    &__box {
+      width: 100%;
+      padding: 2rem;
+      top: 2rem;
+    }
+  
+    &__title {
+      font-size: 2rem;
+      letter-spacing: .8rem;
+    }
+  
+    &__p {
+      font-size: 1.2rem;
+    }
+  } 
+}
+
+@media screen and (max-width: 360px) {
+  .text {  
+    &__div {
+      top: -33rem; left: 0;
+    }
+    &__parallax {
+      font-size: 5rem;
+    }
+  
+    &__box {
+      padding: .8rem;
+    }
+  
+    &__title {
+      font-size: 1.8rem;
+    }
+  
+    &__p {
+      font-size: 1rem;
+    }
+  } 
+}
+
+@media screen and (max-width: 320px) {
+  .text {  
+    &__div {
+      top: -26rem; left: 0;
+    }
+  }
+}
