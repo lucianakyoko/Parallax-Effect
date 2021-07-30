@@ -4,7 +4,7 @@
  
  Este efeito é causado pela ilusão de ótica e dá a sensação de profundidade à página, oferecendo, ao visitante, uma experiência mais imersiva. 
 
-* Ferramentas e metodologias:
+## Ferramentas e metodologias:
  - Figma para o desenvolvimento do design.
  - Metodologia BEM para organizar as classes.
  - Media queries para responsividade.
@@ -12,17 +12,17 @@
  - Netlify para deploy.
  - Photopea para tratamento das imagens.
 
-* Animações:
+## Animações:
  - usei o keyframes para animar o planeta e as estrelas do background.
 
-* CSS:
+## CSS:
  - flexbox para alinhar os elementos na tela.
  - position absolute/fixed/relative para posicionar alguns elementos.
 
-* JavaScript:
+## JavaScript:
  - Manipulação da DOM.
 
-* Link da página:[aqui](https://efeito-parallax-com-js.netlify.app/)
+## Link da página:[aqui](https://efeito-parallax-com-js.netlify.app/)
  
  
  ![Preview da página](https://github.com/lucianakyoko/3D-Card-Hover-Effect/blob/main/3deffect.gif)
