@@ -480,3 +480,149 @@ a {
     width: 60%;
   }
 }
+
+.about__page {
+  background-color: #05061A;
+  height: 100vh;
+  animation: stars 3s linear infinite;
+}
+
+.about__container {
+  background-color: rgba(2, 3, 12, 0.76);
+  border-radius: .8rem;
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 10rem;
+}
+
+.about .planet-side {
+  width: 40%;
+}
+
+.about .planet {
+  margin: auto;
+  border-radius: 50%;
+  background-image: url(../img/map.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: rotate 15s linear infinite;
+  width: 20rem;
+  height: 20rem;
+  box-shadow: -25px -25px 25px black inset, 30px 20px 70px #762A6A inset, 0px 0px 10px #ffffff;
+}
+
+.about .text-side {
+  width: 60%;
+}
+
+.about__title {
+  text-align: center;
+  letter-spacing: .8rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+
+.about__p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: .8rem;
+  margin-bottom: 2rem;
+}
+
+.about__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: .8rem;
+  border: 2px solid #FFFAFA;
+  border-radius: .8rem;
+  width: fit-content;
+  padding: 1rem;
+  margin: 2rem auto;
+  transition: border 1s ease-in-out;
+}
+
+.about__btn:hover {
+  border: 2px solid #762A6A;
+}
+
+@media screen and (max-width: 1025px) {
+  .about__container {
+    top: 6rem;
+  }
+  .about .planet-side {
+    width: 40%;
+  }
+  .about .planet {
+    width: 15rem;
+    height: 15rem;
+  }
+  .about__title {
+    font-size: 2rem;
+  }
+  .about__p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .about {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .about__container {
+    position: relative;
+    top: 7rem;
+  }
+  .about .planet-side {
+    width: 30%;
+  }
+  .about .planet {
+    width: 10rem;
+    height: 10rem;
+  }
+  .about .text-side {
+    width: 70%;
+  }
+  .about__title {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .about__container {
+    width: 100%;
+    flex-direction: column;
+  }
+  .about .planet-side {
+    width: 100%;
+  }
+  .about .planet {
+    width: 50rem;
+    height: 50rem;
+    position: absolute;
+    top: -40rem;
+  }
+  .about .text-side {
+    width: 100%;
+    position: absolute;
+    top: 0rem;
+    padding: 2rem;
+  }
+  .about__title {
+    font-size: 1.6rem;
+  }
+  .about__p {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,161 @@
+.about__page {
+  background-color:$color-secondary;
+  height: 100vh;
+
+  animation: stars 3s linear infinite;
+}
+
+.about {
+  &__container {
+    background-color: rgba(2, 3, 12, 0.76);
+    border-radius: .8rem;
+    width: 80%;
+    margin: auto;
+    padding: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    top: 10rem;
+  }
+
+  .planet-side {
+    width: 40%;
+  }
+
+  .planet {
+    margin: auto;
+    @include planet;
+    width: 20rem; height: 20rem;
+    box-shadow: -25px -25px 25px black inset, 30px 20px 70px #762A6A inset, 0px 0px 10px #ffffff;
+  }
+
+  .text-side {
+    width: 60%
+  }
+
+  &__title {
+    text-align: center;
+    letter-spacing: .8rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 2rem 0
+  }
+
+  &__p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: .8rem;
+    margin-bottom: 2rem;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .8rem;
+    border: 2px solid $color-text;
+    border-radius: .8rem;
+    width: fit-content;
+    padding: 1rem; margin: 2rem auto;
+
+    transition: border 1s ease-in-out;
+
+    &:hover {
+      border: 2px solid $color-tertiary;
+    }
+  }
+}
+
+//Media Queries:
+
+@media screen and (max-width: 1025px) {
+  .about {
+    &__container {
+      top: 6rem;
+    }
+
+    .planet-side {
+      width: 40%;
+    }
+
+    .planet {
+      width: 15rem; height: 15rem;
+    }
+  
+    &__title {
+      font-size: 2rem;
+    }
+  
+    &__p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .about {
+    height: 100vh;
+    overflow: hidden;
+    &__container {
+      position: relative;
+      top: 7rem;
+    }
+    
+    .planet-side {
+      width: 30%;
+    }
+    .planet {
+      width: 10rem; height: 10rem;
+    }
+    
+    .text-side {
+      width: 70%
+    }
+    &__title {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .about {
+    &__container {
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    .planet-side {
+      width: 100%;
+    }
+
+    .planet {
+      width: 50rem; height: 50rem;
+      position: absolute;
+      top: -40rem;
+    }
+    
+    .text-side {
+      width: 100%;
+      position: absolute;
+      top: 0rem;
+      padding: 2rem;
+
+    }
+  
+    &__title {
+      font-size: 1.6rem;
+    }
+  
+    &__p {
+      font-size: 1.2rem;
+    }
+  }
+}
